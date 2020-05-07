@@ -6,12 +6,14 @@ function Splitz(props) {
   // e.g. permit classNames props assigned from elsewhere 
   // (say, the parent App.js)
   const combinedClassName = `split ${props.className}`;
+  const newStyles = {flex: props.flexBasis};
 
   return (
-    // <div className="split">
-    <div className={combinedClassName}>
+    <div 
+      className={combinedClassName}
+      style={newStyles}
+    >
       {props.children}
-      {/* This is the content of the split component. Lorem ipsum dolor sit amet consectetur adipisicing elit. */}
     </div>
   );
 }

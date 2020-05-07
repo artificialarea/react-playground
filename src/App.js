@@ -8,7 +8,7 @@ function App() {
       {/* content goes here */}
       {/* <Splitz />
       <Splitz /> */}
-      <Splitz className='left'>
+      <Splitz className='left' flexBasis={2}>
         This is the content for the left 'Split'. Lorem ipsum muthafucka.
       </Splitz>
       <Splitz className='right'>
