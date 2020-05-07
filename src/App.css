@@ -13,13 +13,15 @@ body {
 }
 
 .left {
-  flex-basis: 2;
+  flex: 2 1 0%;
+  /* flex-basis: 2; */
   background-color: darkslategrey;
   color: azure;
 }
 
 .right {
-  flex-basis: 1;
+  flex: 1 1 0%; 
+  /* flex-basis: 1; */
   background-color: wheat;
   color: firebrick;
 }

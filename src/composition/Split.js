@@ -14,6 +14,7 @@ function Splitz(props) {
       style={newStyles}
     >
       {props.children}
+      Appears that the original text from the parent is not overwritten by props.children... that text just gets prepended.
     </div>
   );
 }
