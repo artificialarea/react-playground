@@ -1,0 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1rem; /* why is 16px so big? */
+}
+
+.App {
+  display: flex;
+  margin: 40px;
+  min-height: calc(100vh - 80px);
+}
