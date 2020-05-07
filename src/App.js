@@ -1,19 +1,19 @@
 import React from 'react';
-import Split from './composition/Split';
+import Splitz from './composition/Split';
 import './App.css';
 
 function App() {
   return (
     <main className='App'>
       {/* content goes here */}
-      {/* <Split />
-      <Split /> */}
-      <Split className='left'>
+      {/* <Splitz />
+      <Splitz /> */}
+      <Splitz className='left'>
         This is the content for the left 'Split'. Lorem ipsum muthafucka.
-      </Split>
-      <Split className='right'>
+      </Splitz>
+      <Splitz className='right'>
         This is the content for the right 'Split'. Duis autem, innit?
-      </Split>
+      </Splitz>
 
     </main>
   );

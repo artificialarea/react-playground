@@ -1,7 +1,7 @@
 import React from 'react';
 import './Split.css';
 
-function Split(props) {
+function Splitz(props) {
   // to make Split custom component configuratable
   // e.g. permit classNames props assigned from elsewhere 
   // (say, the parent App.js)
@@ -16,5 +16,5 @@ function Split(props) {
   );
 }
 
-export default Split;
+export default Splitz;
 
