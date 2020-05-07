@@ -7,12 +7,11 @@ function App() {
     <main className='App'>
       {/* content goes here */}
       {/* <Split />
-      <br />
       <Split /> */}
-      <Split>
+      <Split className='left'>
         This is the content for the left 'Split'. Lorem ipsum muthafucka.
       </Split>
-      <Split>
+      <Split className='right'>
         This is the content for the right 'Split'. Duis autem, innit?
       </Split>
 
