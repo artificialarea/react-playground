@@ -2,6 +2,8 @@ import React from 'react';
 import Splitz from './composition/Split';
 import './App.css';
 
+// Component Composition exercise, per: https://courses.thinkful.com/react-v1/checkpoint/6
+
 function App() {
   return (
     <main className='App'>
