@@ -1,24 +1,46 @@
 import React from 'react';
-import Splitz from './composition/Split';
 import './App.css';
+import Splitz from './composition/Split';
+import Tooltip from './composition/Tooltip';
 
-// Component Composition exercise, per: https://courses.thinkful.com/react-v1/checkpoint/6
+//////////////////////////////////////////////////////////
+//
+// [v1] Component Composition exercise, 
+// per: https://courses.thinkful.com/react-v1/checkpoint/6
+//
+// [v2] Default Props and Class Components exercise,
+// per: https://courses.thinkful.com/react-v1/checkpoint/7
+//
+//////////////////////////////////////////////////////////
+
+// make 2 tooltips here (and another inside the App directly)
+const firstTooltip = (
+  <Tooltip message='tooltip message'>
+    IPSUM
+  </Tooltip>
+)
+const secondTooltip = (
+  <Tooltip message='another tooltip message'>
+    OFFICIIS
+  </Tooltip>
+)
+
 
 function App() {
   return (
     <main className='App'>
-      {/* content goes here */}
-      {/* <Splitz />
-      <Splitz /> */}
       <Splitz className='left' flexBasis={3}>
-        This is the content for the left 'Split'. Lorem ipsum muthafucka.<p />
+        This is the content for the left 'Split'. Lorem {firstTooltip} dolor sit amet consectetur, adipisicing elit. Incidunt ex velit suscipit facere officia muthafucka?<p />
+        {/* make another tooltip directly inside the App */}
+        <Tooltip message='one more tooltip message (inline)'>
+          Necessitatibus?
+        </Tooltip><p />
       </Splitz>
       <Splitz className='right' flexBasis={2}>
-        This is the content for the right 'Split'. Duis autem, innit?
+        This is the content for the right 'Split'. Inventore aliquid cupiditate suscipit repellat. Quaerat quis {secondTooltip} quam fuga. Aliquid quo possimus id soluta aspernatur.Duis autem, innit?&nbsp;
       </Splitz>
-
     </main>
   );
 }
 
-export default App;
+export default App
