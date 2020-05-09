@@ -15,12 +15,12 @@ import Tooltip from './composition/Tooltip';
 
 // make 2 tooltips here (and another inside the App directly)
 const firstTooltip = (
-  <Tooltip message='tooltip message'>
+  <Tooltip color='hotpink' message='tooltip message'>
     IPSUM
   </Tooltip>
 )
 const secondTooltip = (
-  <Tooltip message='another tooltip message'>
+  <Tooltip color='#126BCC' message='another tooltip message'>
     OFFICIIS
   </Tooltip>
 )
