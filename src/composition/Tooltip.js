@@ -41,4 +41,7 @@ class TooltipClass extends React.Component {
 }
 
 // export default Tooltip;
-export default TooltipClass;
+export default TooltipClass; 
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^ QUESTION: 
+Why does App.js still import this properly even though it's still 'import Tooltip...' (not 'import TooltipClass...')?
+*/
