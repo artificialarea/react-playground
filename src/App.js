@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Splitz from './composition/Split';
 import Tooltip from './composition/Tooltip';
+import Messages from './messages/Messages.js';
 
 //////////////////////////////////////////////////////////
 //
@@ -29,6 +30,8 @@ const secondTooltip = (
 function App() {
   return (
     <main className='App'>
+      <Messages name="Messages" unread={0} />
+      <Messages name="Notifications" unread={10} />
       <Splitz className='left' flexBasis={3}>
         This is the content for the left 'Split'. Lorem {firstTooltip} dolor sit amet consectetur, adipisicing elit. Incidunt ex velit suscipit facere officia muthafucka?<p />
         {/* make another tooltip directly inside the App */}
@@ -37,9 +40,18 @@ function App() {
         </Tooltip><p />
       </Splitz>
       <Splitz className='right' flexBasis={2}>
-        This is the content for the right 'Split'. Inventore aliquid cupiditate suscipit repellat. Quaerat quis {secondTooltip} quam fuga. Aliquid quo possimus id soluta aspernatur.Duis autem, innit?&nbsp;
+        This is the content for the right 'Split'. Inventore aliquid cupiditate suscipit repellat. Quaerat quis {secondTooltip} quam fuga. Aliquid quo possimus id soluta aspernatur.Duis autem, innit?&nbsp;<p />
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
       </Splitz>
     </main>
+    // <div>This does not belong here</div> // throw error for smoke test
   );
 }
 
