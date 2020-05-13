@@ -1,26 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Messages  renders the UI as expected 1`] = `
-<section
-  className="messages"
->
-  Messages
-  <div
-    className="unread_count badge"
-  >
-    4
-  </div>
-</section>
-`;
-
-exports[`<Messages  renders the UI as expected with no unreads 1`] = `
-<section
-  className="messages"
->
-  Messages
-</section>
-`;
-
 exports[`<Messages /> renders the UI as expected 1`] = `
 <section
   className="messages"
@@ -35,48 +14,6 @@ exports[`<Messages /> renders the UI as expected 1`] = `
 `;
 
 exports[`<Messages /> renders the UI as expected with no unreads 1`] = `
-<section
-  className="messages"
->
-  Messages
-</section>
-`;
-
-exports[`<Messages component renders the UI as expected 1`] = `
-<section
-  className="messages"
->
-  Messages
-  <div
-    className="unread_count badge"
-  >
-    4
-  </div>
-</section>
-`;
-
-exports[`<Messages component renders the UI as expected with no unreads 1`] = `
-<section
-  className="messages"
->
-  Messages
-</section>
-`;
-
-exports[`Messages component renders the UI as expected 1`] = `
-<section
-  className="messages"
->
-  Messages
-  <div
-    className="unread_count badge"
-  >
-    4
-  </div>
-</section>
-`;
-
-exports[`Messages component renders the UI as expected with no unreads 1`] = `
 <section
   className="messages"
 >
