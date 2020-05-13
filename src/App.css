@@ -12,6 +12,15 @@ body {
   min-height: calc(100vh - 80px); */
 }
 
+.containTheDate {
+  border: 4px solid black;
+  font-weight: bold;
+  margin: 40px auto;
+  max-width: 300px;
+  padding: 10px;
+  text-align: center;
+}
+
 .containSplitz {
   display: flex;
   margin: 40px;
@@ -19,17 +28,17 @@ body {
 }
 
 .left {
+  background-color: darkslategrey;
+  color: azure;
   flex: 2 1 0%; 
   /* ^^^^ FYI: urrently being overwritten by inline flexBasis style in App.js */
   /* flex-basis: 2; */
-  background-color: darkslategrey;
-  color: azure;
 }
 
 .right {
+  background-color: wheat;
+  color: firebrick;
   flex: 1 1 0%; 
   /* ^^^^ FYI: currently being overwritten by inline flexBasis style in App.js */
   /* flex-basis: 1; */
-  background-color: wheat;
-  color: firebrick;
 }

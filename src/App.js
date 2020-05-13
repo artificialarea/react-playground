@@ -3,6 +3,7 @@ import './App.css';
 import Splitz from './composition/Split';
 import Tooltip from './composition/Tooltip';
 import Messages from './messages/Messages.js';
+import TheDate from './state/TheDate';
 
 //////////////////////////////////////////////////////////
 //
@@ -37,6 +38,10 @@ function App() {
   return (
     <main className='App'>
 
+      <div className="containTheDate">
+        <TheDate />
+      </div>
+
       <div className="containMessages">
         <Messages name="Messages" unread={0} />
         <Messages name="Notifications" unread={10} />
@@ -59,7 +64,7 @@ function App() {
             rel="noopener noreferrer"
           >
             Learn React
-          </a>
+          </a><br />
         </Splitz>
       </div>
       
