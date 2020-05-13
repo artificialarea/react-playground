@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TheDate /> renders UI without crashing 1`] = `
+<div>
+  5/13/2020, 11:54:51 AM
+</div>
+`;
