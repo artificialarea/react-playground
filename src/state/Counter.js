@@ -2,9 +2,15 @@ import React from 'react';
 
 class Counter extends React.Component {
 
-  state = {   
-    count: 0,
-  };
+  // Fix method 1: constructor bind
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      count: 0,
+    }
+    this.handleButtonClick = this.handleButtonClick.bind(this)
+  }
 
   handleButtonClick() {
     console.log(this.state.count);
@@ -15,7 +21,6 @@ class Counter extends React.Component {
       <div>
         <p> The current count: {this.state.count}</p>
         <button 
-          // OPTION 00 (Didn't work, b/c 'this' is undefined)
           onClick={this.handleButtonClick}
         >
           +
