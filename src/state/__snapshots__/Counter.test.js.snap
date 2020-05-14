@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Counter /> render UI without crashing 1`] = `
+<div>
+  <p>
+     The current count: 
+    0
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    +
+  </button>
+</div>
+`;
