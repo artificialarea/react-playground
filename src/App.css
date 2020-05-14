@@ -13,7 +13,9 @@ body {
 }
 
 .App > div {
-  margin: 40px auto;
+  border-bottom: 1px dotted black;
+  margin: 0 auto;
+  padding: 40px 0 40px 0;
   text-align: center;
 }
 
@@ -42,10 +44,10 @@ body {
   padding: 5px;
 }
 
-.containSplitz {
+.App > .containSplitz {
   display: flex;
-  margin: 40px;
   min-height: calc(100vh - 80px);
+  border: none;
 }
 
 .left {

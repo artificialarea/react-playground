@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RussianRoulette /> renders the UI as expected 1`] = `
+<div>
+  <p
+    className="status"
+  >
+    The Deer Hunter
+  </p>
+  <button
+    onClick={[Function]}
+  >
+    Spin Chamber and Pull the Trigger!
+  </button>
+</div>
+`;

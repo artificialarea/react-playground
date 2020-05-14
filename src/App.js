@@ -7,6 +7,7 @@ import TheDate from './state/TheDate';
 import Counter from './state/Counter';
 import HelloWorld from './state-drills/HelloWorld';
 import Bomb from './state-drills/Bomb';
+import RussianRoulette from './state-drills/RussianRoulette';
 
 //////////////////////////////////////////////////////////
 //
@@ -41,6 +42,12 @@ function App() {
   return (
     <main className='App'>
 
+      <div className="containRussianRoulette">
+        <RussianRoulette  
+          bullletInChamber={2}
+        />
+      </div>
+
       <div className="containBomb">
         <Bomb />
       </div>
@@ -49,15 +56,17 @@ function App() {
         <HelloWorld />
       </div>
 
+      <div>
+        <div className="containTheDate">
+          <TheDate />
+        </div>
+      </div>
+
       <div className="containCounter">
         <Counter 
           count={123}
           steps={2}
         />
-      </div>
-
-      <div className="containTheDate">
-        <TheDate />
       </div>
 
       <div className="containMessages">

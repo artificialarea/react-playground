@@ -36,8 +36,9 @@ class Bomb extends React.Component {
 
     return (
       <div>
-        <p className="counter">{counter}</p>
         <p className="sound">{sound}</p>
+        <p className="counter">{counter}</p>
+        
       </div>
     )
   }

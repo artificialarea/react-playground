@@ -3,14 +3,14 @@
 exports[`<Bomb /> renders UI as expected 1`] = `
 <div>
   <p
-    className="counter"
-  >
-    1
-  </p>
-  <p
     className="sound"
   >
     "tick"
+  </p>
+  <p
+    className="counter"
+  >
+    1
   </p>
 </div>
 `;
