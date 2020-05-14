@@ -10,19 +10,19 @@ exports[`<HelloWorld /> renders UI as expected 1`] = `
   </p>
   <button
     onClick={[Function]}
-    value="world"
+    value="world!"
   >
     World
   </button>
   <button
     onClick={[Function]}
-    value="friend"
+    value="friend!"
   >
     Friend
   </button>
   <button
     onClick={[Function]}
-    value="React"
+    value="React!"
   >
     React
   </button>

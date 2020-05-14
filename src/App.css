@@ -17,6 +17,11 @@ body {
   text-align: center;
 }
 
+.containBomb .sound {
+  font-size: 48px;
+  margin-top: 0;
+}
+
 .containCounter button {
   font-size: 18px;
 }

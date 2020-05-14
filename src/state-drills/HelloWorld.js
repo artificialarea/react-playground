@@ -17,17 +17,17 @@ class HelloWorld extends React.Component {
 
         <p>Hello, {this.state.who}</p>
 
-        <button value="world"
+        <button value="world!"
           onClick={this.handleButtonClick}
         >
           World
         </button>
-        <button value="friend"
+        <button value="friend!"
           onClick={this.handleButtonClick}
         >
           Friend
         </button>
-        <button value="React"
+        <button value="React!"
           onClick={this.handleButtonClick}
         >
           React
