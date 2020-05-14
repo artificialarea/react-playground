@@ -4,6 +4,7 @@ import Splitz from './composition/Split';
 import Tooltip from './composition/Tooltip';
 import Messages from './messages/Messages.js';
 import TheDate from './state/TheDate';
+import Counter from './state/Counter';
 
 //////////////////////////////////////////////////////////
 //
@@ -37,6 +38,10 @@ const secondTooltip = (
 function App() {
   return (
     <main className='App'>
+
+      <div className="containCounter">
+        <Counter />
+      </div>
 
       <div className="containTheDate">
         <TheDate />
