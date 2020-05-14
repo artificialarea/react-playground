@@ -11,13 +11,10 @@ class RussianRoulette extends React.Component {
     };
 
     this.state.chamber = props.bulletInChamber
-    // ^^^^^^^^^^^^^
-    // props.bulletInChamber value from defaultProps,
-    // <App /> prop value being ignored. Why?
   }
 
   static defaultProps = {
-    bulletInChamber: 8,
+    bulletInChamber: null,
   }
 
   toBeOrNotToBe() {

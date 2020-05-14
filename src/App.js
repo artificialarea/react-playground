@@ -44,7 +44,7 @@ function App() {
 
       <div className="containRussianRoulette">
         <RussianRoulette  
-          bullletInChamber={2}
+          bulletInChamber={2}
         />
       </div>
 
