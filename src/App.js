@@ -40,7 +40,10 @@ function App() {
     <main className='App'>
 
       <div className="containCounter">
-        <Counter />
+        <Counter 
+          count={123}
+          steps={2}
+        />
       </div>
 
       <div className="containTheDate">
