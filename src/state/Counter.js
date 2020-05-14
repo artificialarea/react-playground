@@ -2,14 +2,10 @@ import React from 'react';
 
 class Counter extends React.Component {
 
-  // Fix method 1: constructor bind
+  // Fix method 2: arrow function in JSX
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      count: 0,
-    }
-    this.handleButtonClick = this.handleButtonClick.bind(this)
+  state = {
+    count: 0,
   }
 
   handleButtonClick() {
@@ -21,7 +17,7 @@ class Counter extends React.Component {
       <div>
         <p> The current count: {this.state.count}</p>
         <button 
-          onClick={this.handleButtonClick}
+          onClick={() => this.handleButtonClick()}
         >
           +
         </button>
