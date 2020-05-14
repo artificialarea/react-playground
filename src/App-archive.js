@@ -5,9 +5,9 @@ import Tooltip from './composition/Tooltip';
 import Messages from './messages/Messages.js';
 import TheDate from './state/TheDate';
 import Counter from './state/Counter';
-import HelloWorld from './state-drills/HelloWorld';
-import Bomb from './state-drills/Bomb';
-import RussianRoulette from './state-drills/RussianRoulette';
+import HelloWorld from './state-drills-archive/HelloWorld';
+import Bomb from './state-drills-archive/Bomb';
+import RussianRoulette from './state-drills-archive/RussianRoulette';
 
 //////////////////////////////////////////////////////////
 //
