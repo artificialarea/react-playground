@@ -11,7 +11,7 @@ class TheDate extends React.Component {
       list: [1, 2, 3],
       obj: { nested: 'object', yes: true },
     }
-    console.log('constructor');
+    // console.log('constructor');
   }
 
   componentDidMount() {
@@ -20,14 +20,14 @@ class TheDate extends React.Component {
       // Enter the method, setState: the setState method takes an object argument, that the component will then merge with the exisiting state, without requiring to change the render (because the new object has the same key as the existing state).// Everytime setState is called, the React component will re-trigger render.
       this.setState({ datetime: new Date() });
     }, 1000); 
-    console.log('componentDidMount')
+    // console.log('componentDidMount')
   }
   componentWillUnmount() {
     clearInterval(this.interval)
   }
 
   render() {
-    console.log('render')
+    // console.log('render')
     return <div>{this.state.datetime.toLocaleString()}</div>
   }
 }

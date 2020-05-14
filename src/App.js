@@ -5,6 +5,7 @@ import Tooltip from './composition/Tooltip';
 import Messages from './messages/Messages.js';
 import TheDate from './state/TheDate';
 import Counter from './state/Counter';
+import HelloWorld from './state-drills/HelloWorld';
 
 //////////////////////////////////////////////////////////
 //
@@ -38,6 +39,10 @@ const secondTooltip = (
 function App() {
   return (
     <main className='App'>
+
+      <div className="containHelloWorld">
+        <HelloWorld />
+      </div>
 
       <div className="containCounter">
         <Counter 
