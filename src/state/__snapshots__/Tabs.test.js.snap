@@ -2,13 +2,19 @@
 
 exports[`<Tabs /> renders the first tab by default 1`] = `
 <div>
-  <button>
+  <button
+    onClick={[Function]}
+  >
     First tab
   </button>
-  <button>
+  <button
+    onClick={[Function]}
+  >
     Second tab
   </button>
-  <button>
+  <button
+    onClick={[Function]}
+  >
     Third tab
   </button>
   <div
