@@ -28,7 +28,7 @@ class RussianRoulette extends React.Component {
     } else {
       this.setState({
         content: 'Phew! You\'re safe!',
-        chamber: randomChamber
+        chamber: randomChamber       
       })
     }
     console.log(`"${this.state.content}"`)

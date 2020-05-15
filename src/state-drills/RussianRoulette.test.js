@@ -16,7 +16,7 @@ describe('<RussianRoulette />', () => {
     const tree = renderer
       .create(<RussianRoulette />)
       .toJSON()
-    expect(tree).toMatchSnapshot()
+    expect(tree).toMatchSnapshot()                                    
   });
 
 });
