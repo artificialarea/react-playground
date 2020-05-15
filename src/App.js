@@ -8,13 +8,14 @@ import Counter from './state/Counter';
 import HelloWorld from './state-drills/HelloWorld';
 import Bomb from './state-drills/Bomb';
 import RussianRoulette from './state-drills/RussianRoulette';
+import Tabs from './state/Tabs';
 
 //////////////////////////////////////////////////////////
 //
-// [v1] Component Composition exercise, 
+// [v1] Component Composition, 
 // per: https://courses.thinkful.com/react-v1/checkpoint/6
 //
-// [v2] Default Props and Class Components exercise,
+// [v2] Default Props and Class Components,
 // per: https://courses.thinkful.com/react-v1/checkpoint/7
 //
 // [v3] Intro to Testing,
@@ -23,8 +24,12 @@ import RussianRoulette from './state-drills/RussianRoulette';
 // [v4] React State,
 // per: https://courses.thinkful.com/react-v1/checkpoint/9
 //
+// [v5] Event Handlers and Conditional Rendering,
+// per: https://courses.thinkful.com/react-v1/checkpoint/9
+//
 //////////////////////////////////////////////////////////
 
+// FOR <SPLITZ /> ////////////////////////////////////////
 // make 2 tooltips here (and another inside the App directly)
 const firstTooltip = (
   <Tooltip color='hotpink' message='tooltip message'>
@@ -37,10 +42,25 @@ const secondTooltip = (
   </Tooltip>
 )
 
+// FOR <TABS /> /////////////////////////////////////////
+// to accept as a prop
+const tabsProp = [
+  { name: 'First tab',
+    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque.' },
+  { name: 'Second tab',
+    content: 'Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+  { name: 'Third tab',
+    content: 'Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur.' },
+];
+
 
 function App() {
   return (
     <main className='App'>
+
+      <div className="containTabs">
+        <Tabs tabs={tabsProp} />
+      </div>
 
       <div className="containRussianRoulette">
         <RussianRoulette  
