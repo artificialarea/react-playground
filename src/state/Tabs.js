@@ -42,7 +42,9 @@ class Tabs extends React.Component {
         {this.renderButtons()}
         {/* Conditional Rendering: so smoke test doesn't fail, 
         only show content when the tabs array isn't empty */}
-        {this.props.tabs.length && this.renderContent()}
+        {/* Additionally, for testing enzyme snapshot testing will coerce the .length call inside the render (if zero) into a boolean
+        using not-not (!!) */}
+        {!!this.props.tabs.length && this.renderContent()}
       </div>
     )
   }

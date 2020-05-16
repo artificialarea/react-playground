@@ -1,20 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import renderer from 'react-test-renderer';
 import Tabs from './Tabs';
 
-// Need to copy the tabsProp from <App /> into the test file
-// ME: That doesn't seem to be efficient nor scalable?
-const tabsProp = [
-  { name: 'First tab',
-    content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque.' },
-  { name: 'Second tab',
-    content: 'Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
-  { name: 'Third tab',
-    content: 'Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur.' },
-];
+// It's strange to use a mixture of both 
+// react-test-renderer and enzyme inside one test file, 
+// so let's refactor the whole file to use Enzyme only
+// import renderer from 'react-test-renderer'; // disabled
+import { shallow } from 'enzyme';
+import toJson from 'enzyme-to-json';
+
 
 describe('<Tabs />', () => {
+
+  // Need to copy the tabsProp from <App /> into the test file
+  // ME: That doesn't seem to be efficient nor scalable?
+  const tabsProp = [
+    { name: 'First tab',
+      content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque.' },
+    { name: 'Second tab',
+      content: 'Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
+    { name: 'Third tab',
+      content: 'Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur.' },
+    ];
 
   it('renders without errors', () => {
     const div = document.createElement('div')
@@ -22,9 +29,27 @@ describe('<Tabs />', () => {
     ReactDOM.unmountComponentAtNode(div)
   });
 
+  it('renders empty given no tabs', () => {
+    const wrapper = shallow(<Tabs />)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  });
+
   it('renders the first tab by default', () => {
-    const tree = renderer.create(<Tabs tabs={tabsProp} />).toJSON()
-    expect(tree).toMatchSnapshot()
+    const wrapper = shallow(<Tabs tabs={tabsProp} />)
+    expect(toJson(wrapper)).toMatchSnapshot()
+  });
+
+  it('closes the first tab and opens any clicked tab', () => {
+    const wrapper = shallow(<Tabs tabs={tabsProp} />)
+    wrapper.find('button').at(1).simulate('click')
+    expect(toJson(wrapper)).toMatchSnapshot()
+    // ENZYME DEBUGGING TEMPLATE //////////////////////////
+    // console.log('>>> WRAPPER <<<')
+    // console.log(wrapper.debug())
+    // console.log('>>> FIND(BUTTON) <<<')
+    // console.log(wrapper.find('button').at(1).debug())
+    // ^^^^ chained .at() method to test specific button
+    ///////////////////////////////////////////////////////
   });
 
 });
