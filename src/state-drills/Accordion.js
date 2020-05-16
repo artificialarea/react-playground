@@ -1,4 +1,5 @@
 import React from 'react';
+import './Accordion.css';
 
 class Accordion extends React.Component {
   state = {
@@ -28,9 +29,14 @@ class Accordion extends React.Component {
 
   render() {
     return (
-      <ul>
-        {this.props.sections.length && this.renderLis()}
-      </ul>
+      <div>
+        <h1>Accordion</h1>
+        <hr />
+        <ul>
+          {/* {!!this.props.sections.length && this.renderLis()} */}
+          {this.props.sections.length ? this.renderLis() : <li/>}
+        </ul>
+      </div>
     )
   }
 }
