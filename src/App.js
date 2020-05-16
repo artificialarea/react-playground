@@ -9,6 +9,7 @@ import HelloWorld from './state-drills/HelloWorld';
 import Bomb from './state-drills/Bomb';
 import RussianRoulette from './state-drills/RussianRoulette';
 import Tabs from './state/Tabs';
+import Accordion from './state-drills/Accordion';
 
 //////////////////////////////////////////////////////////
 //
@@ -25,7 +26,7 @@ import Tabs from './state/Tabs';
 // per: https://courses.thinkful.com/react-v1/checkpoint/9
 //
 // [v5] Event Handlers and Conditional Rendering,
-// per: https://courses.thinkful.com/react-v1/checkpoint/9
+// per: https://courses.thinkful.com/react-v1/checkpoint/10
 //
 //////////////////////////////////////////////////////////
 
@@ -57,6 +58,10 @@ const tabsProp = [
 function App() {
   return (
     <main className='App'>
+
+      <div className='containAccordion'>
+        <Accordion />
+      </div>
 
       <div className="containTabs">
         <Tabs tabs={tabsProp} />
