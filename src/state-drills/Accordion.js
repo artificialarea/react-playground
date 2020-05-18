@@ -30,8 +30,7 @@ class Accordion extends React.Component {
   render() {
     return (
       <div>
-        <h1>Accordion</h1>
-        <hr />
+        <h2>Accordion</h2>
         <ul>
           {/* {!!this.props.sections.length && this.renderLis()} */}
           {this.props.sections.length ? this.renderLis() : <li/>}
