@@ -1,6 +1,7 @@
-// src: https://courses.thinkful.com/react-v1/checkpoint/9#assignment
-
 import React from 'react';
+
+// src: https://courses.thinkful.com/react-v1/checkpoint/9#assignment
+// alt solution: https://github.com/tomatau/state-drills/blob/master/src/state-drills/HelloWorld.js
 
 class HelloWorld extends React.Component {
   state = {

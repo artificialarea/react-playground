@@ -1,5 +1,8 @@
 import React from 'react';
 
+// src: https://courses.thinkful.com/react-v1/checkpoint/9#assignment
+// alt solution: https://github.com/tomatau/state-drills/blob/master/src/state-drills/RouletteGun.js
+
 class RussianRoulette extends React.Component {
   
   constructor(props) {

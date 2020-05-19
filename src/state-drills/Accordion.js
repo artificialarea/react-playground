@@ -1,6 +1,11 @@
 import React from 'react';
 import './Accordion.css';
 
+// src: https://courses.thinkful.com/react-v1/checkpoint/10#assignment
+// alt solution: https://github.com/tomatau/state-drills/tree/accordion/src/accordion
+
+
+
 class Accordion extends React.Component {
   state = {
     currentLi: null,
