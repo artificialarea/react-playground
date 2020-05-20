@@ -10,54 +10,62 @@ class RussianRoulette extends React.Component {
     this.state = {
       chamber: null,
       spinningTheChamber: false,
-      content: 'The Deer Hunter',
     };
 
-    this.state.chamber = props.bulletInChamber
+    const { bulletInChamber } = this.props
+    console.log(`bullet in chamber: ${bulletInChamber}`)
+
   }
 
   static defaultProps = {
-    bulletInChamber: null,
-  }
-
-  toBeOrNotToBe() {
-    const randomChamber = Math.ceil(Math.random() * 8)
-    console.log(`spinning stoped at chamber ${randomChamber}`)
-    
-    if (randomChamber === this.state.chamber) {
-      this.setState({
-        content: 'BANG!!!! You\'re dead.',
-      })
-    } else {
-      this.setState({
-        content: 'Phew! You\'re safe!',
-        chamber: randomChamber       
-      })
-    }
-    console.log(`"${this.state.content}"`)
+    bulletInChamber: 8,
   }
 
   handleTrigger = () => {
-    console.log('bullet in chamber ' + this.state.chamber)
-    
     this.setState({ 
       spinningTheChamber: true, 
-      content: 'spinning the chamber and pulling the trigger! ...'
     })
     
     this.timer = setTimeout(() => {
-      this.toBeOrNotToBe()
+      const randomChamber = Math.ceil(Math.random() * 8)
+      console.log(`spinning stops at chamber: ${randomChamber}`)
+      this.setState({
+        chamber: randomChamber,
+        spinningTheChamber: false,
+      })
     }, 2000)
   }
 
   componentWillUnmount() {
     clearTimeout(this.timer)
   }
+
+  renderDisplay() {
+
+    const { chamber, spinningTheChamber } = this.state
+    // ^^^^^^ destructuring object 
+    // equivalent to:
+    // const chamber = this.state.chamber;
+    // const spinningTheChamber = this.state.spinningTheChamber;
+
+    const { bulletInChamber } = this.props
+    // console.log(`bullet in chamber:  ${bulletInChamber}`)
+
+    if (spinningTheChamber) {
+      return 'spinning the chamber and pulling the trigger! ...'
+    } else if (chamber === bulletInChamber) {
+      return 'BANG!!!! Yer dead.'
+    } else if (chamber === null) {
+      return 'Scene from The Deer Hunter'
+    } else {
+      return 'Phew! You\'re safe!'
+    }
+  }
   
   render() {
     return (
-      <div>
-        <p className="status">{this.state.content}</p>
+      <div className="RouletteGun">
+        <p className="status">{this.renderDisplay()}</p>
         <button
           onClick={this.handleTrigger}
         >
