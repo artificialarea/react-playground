@@ -5,7 +5,6 @@ import './Accordion.css';
 // alt solution: https://github.com/tomatau/state-drills/tree/accordion/src/accordion
 
 
-
 class Accordion extends React.Component {
   state = {
     currentLi: null,

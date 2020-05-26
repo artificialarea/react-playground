@@ -29,6 +29,10 @@ import STORE from './state-drills/accordion-store';
 // [v5] Event Handlers and Conditional Rendering,
 // per: https://courses.thinkful.com/react-v1/checkpoint/10
 //
+// [v6] React Router
+// per: https://courses.thinkful.com/react-v1/checkpoint/14#setting-up-react-router
+// src: https://github.com/tomatau/paltrows-power-toes
+//
 //////////////////////////////////////////////////////////
 
 // FOR <SPLITZ /> ////////////////////////////////////////
@@ -60,7 +64,7 @@ const tabsProp = [
 function App() {
   return (
     <main className='App'>
-      <div>
+      <div className="containAccordion">
         <Accordion sections={STORE.sections} />
       </div>
 
@@ -82,7 +86,7 @@ function App() {
         <HelloWorld />
       </div>
 
-      <div>
+      <div className="TheDate">
         <div className="containTheDate">
           <TheDate />
         </div>
