@@ -33,6 +33,9 @@ import STORE from './state-drills/accordion-store';
 // per: https://courses.thinkful.com/react-v1/checkpoint/14#setting-up-react-router
 // src: https://github.com/tomatau/paltrows-power-toes
 //
+// [v7] API Requests
+// per: https://courses.thinkful.com/react-v1/checkpoint/13
+//
 //////////////////////////////////////////////////////////
 
 // FOR <SPLITZ /> ////////////////////////////////////////
