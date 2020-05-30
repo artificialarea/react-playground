@@ -23,11 +23,13 @@ export default class App extends React.Component {
       })
       .then(response => response.json())
       .then(data => {
-        console.log(data);
+        // console.log(data); 
         const countries = Object.keys(data)
           .map(key => (
             data[key].item[0]
           ))
+        // console.log(countries); // dunno why the country list is not alphabetized like it is in inital data array? 
+
         this.setState({
           countries // aka 'countries': countries
         })
