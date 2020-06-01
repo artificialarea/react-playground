@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'; // req. npm install
 import './index.css';
 
-// import App from './App'; // enable to see non-power-toe exercises
+import App from './App'; // enable to see non-power-toe exercises
 // import App from './paltrows-power-toes/App'; // re:RouteRouter
-import App from './govuk-api-demonym/App'; // re:API+Promises
+// import App from './govuk-api-demonym/App'; // re:API+Promises
 
 ReactDOM.render(
   <BrowserRouter>
