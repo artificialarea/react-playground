@@ -8,8 +8,8 @@ class GreatGrandChild extends Component {
   static contextType = LanguageContext;
 
   render() {
-    // const copy = languageSpecificCopy['en-US'] || {}  // [fn1]
-    const copy = languageSpecificCopy[this.context.lang] || {}  
+    // const copy = languageSpecificCopy['ko'] || {}  
+    const copy = languageSpecificCopy[this.context.lang] || {}  // [fn1]
     return (
       <section>
         <h2>{copy.title}</h2>
