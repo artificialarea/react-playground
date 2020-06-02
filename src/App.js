@@ -29,13 +29,6 @@ import STORE from './state-drills/accordion-store';
 // [v5] Event Handlers and Conditional Rendering,
 // per: https://courses.thinkful.com/react-v1/checkpoint/10
 //
-// [v6] React Router
-// per: https://courses.thinkful.com/react-v1/checkpoint/14#setting-up-react-router
-// src: https://github.com/tomatau/paltrows-power-toes
-//
-// [v7] API Requests
-// per: https://courses.thinkful.com/react-v1/checkpoint/13
-//
 //////////////////////////////////////////////////////////
 
 // FOR <SPLITZ /> ////////////////////////////////////////

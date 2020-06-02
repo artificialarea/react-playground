@@ -3,9 +3,10 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'; // req. npm install
 import './index.css';
 
-// import App from './App'; // enable to see non-power-toe exercises
-// import App from './paltrows-power-toes/App'; // re:RouteRouter
-import App from './govuk-api-demonym/App'; // re:API+Promises
+// import App from './App'; // [v1—5] exercises
+// import App from './paltrows-power-toes/App'; // [v6] RouteRouter exercise
+// import App from './govuk-api-demonym/App'; // [v7] API+Promises exercise
+import App from './lang-context/App'; // [v8] Context exercise
 
 ReactDOM.render(
   <BrowserRouter>
@@ -15,7 +16,17 @@ ReactDOM.render(
 );
 
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
+//////////////////////////////////////////////////////////
+//
+// [v6] React Router
+// per: https://courses.thinkful.com/react-v1/checkpoint/14#setting-up-react-router
+// src: https://github.com/tomatau/paltrows-power-toes
+//
+// [v7] API Requests
+// per: https://courses.thinkful.com/react-v1/checkpoint/13
+//
+// [v8] Creating and Reading Context
+// per: https://courses.thinkful.com/react-v1/checkpoint/15
+//
+//////////////////////////////////////////////////////////
 
