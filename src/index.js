@@ -6,7 +6,8 @@ import './index.css';
 // import App from './App'; // [v1—5] exercises
 // import App from './paltrows-power-toes/App'; // [v6] RouteRouter exercise
 // import App from './govuk-api-demonym/App'; // [v7] API+Promises exercise
-import App from './lang-context/App'; // [v8] Context exercise
+// import App from './lang-context/App'; // [v8] Context exercise
+import App from './MouseTracker/MouseTrackerApp'; // misc
 
 ReactDOM.render(
   <BrowserRouter>
