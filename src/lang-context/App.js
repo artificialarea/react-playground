@@ -17,7 +17,7 @@ export default class App extends Component {
 
     const contextValue = {
       lang: this.state.lang,
-      setLang: this.handleSetLang,
+      setLang: this.handleSetLang, // forGreatGrandChild, implementing updater callback function using state. Dunno what it all means, tho. Just blindly following orders.
     }
 
     return (
