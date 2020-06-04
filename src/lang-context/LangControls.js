@@ -1,7 +1,8 @@
 import React from 'react'
 import LanguageContext from './LanguageContext'
 
-// console.log(LanguageContext) // The two most important properties, which are React components, are Provider and Consumer. 
+console.log(LanguageContext) 
+// The two most important properties, which are React components, are Provider and Consumer. 
 
 export default function LangControls(props) {
   return (

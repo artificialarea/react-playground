@@ -7,7 +7,7 @@ import './index.css';
 // import App from './paltrows-power-toes/App'; // [v6] RouteRouter exercise
 // import App from './govuk-api-demonym/App'; // [v7] API+Promises exercise
 // import App from './lang-context/App'; // [v8] Context exercise
-import App from './MouseTracker/MouseTrackerApp'; // misc
+import App from './MouseTracker/MouseTrackerApp'; // [v9] Render Props (MouseTracker)
 
 ReactDOM.render(
   <BrowserRouter>
@@ -28,6 +28,9 @@ ReactDOM.render(
 //
 // [v8] Creating and Reading Context
 // per: https://courses.thinkful.com/react-v1/checkpoint/15
+//
+// [v9] Render Props (MouseTracker)
+// per: https://reactjs.org/docs/render-props.html
 //
 //////////////////////////////////////////////////////////
 
