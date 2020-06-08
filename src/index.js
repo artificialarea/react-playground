@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom'; // req. npm install
+import { BrowserRouter } from 'react-router-dom'; // ** req. npm install **
 import './index.css';
 
 // import App from './App'; // enable to see non-power-toe exercises
