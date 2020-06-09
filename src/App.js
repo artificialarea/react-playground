@@ -29,6 +29,8 @@ import STORE from './state-drills/accordion-store';
 // [v5] Event Handlers and Conditional Rendering,
 // per: https://courses.thinkful.com/react-v1/checkpoint/10
 //
+// for other versions, see index.js
+//
 //////////////////////////////////////////////////////////
 
 // FOR <SPLITZ /> ////////////////////////////////////////
