@@ -1,5 +1,5 @@
 import React from 'react';
-import Cat from './Cat'
+// import Cat from './Cat'
 
 // The <Mouse> component encapsulates the behavior we need 
 // to serve as a Render Prop to be reused elsewhere
@@ -19,7 +19,7 @@ export default class Mouse extends React.Component {
   }
 
   render() {
-    console.log(this.state);
+    // console.log(this.state);
     return (
       <div style={{ height: '100vh' }} onMouseMove={this.handleMouseMove}>
 
