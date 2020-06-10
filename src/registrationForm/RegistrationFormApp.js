@@ -84,6 +84,10 @@ export default class RegistrationFormApp extends Component {
   render() {
     const { name, password, repeatPassword } = this.state;
     console.log(name, password, repeatPassword);
+
+    // Re: 'onBlur' Event Listeners
+    // replacing the typical 'onChange' with 'onBlur'
+    // so the Validation of a particular <input> form occurs only once it loses focus (aka blur)
     return (
       <form className="registration" onSubmit={this.handleSubmit}>
         <h2>Register</h2>
@@ -92,7 +96,7 @@ export default class RegistrationFormApp extends Component {
           <label htmlFor="name">Name *</label>
           <input type="text" className="registration__control"
               name="name" id="name" 
-              onChange={event => this.updateInput(event)} />
+              onBlur={event => this.updateInput(event)} />
           {this.state.name.touched && (
             <ValidationError message={this.validateName()} />
           )}  
@@ -101,7 +105,7 @@ export default class RegistrationFormApp extends Component {
           <label htmlFor="password">Password *</label>
           <input type="password" className="registration__control"
               name="password" id="password" 
-              onChange={event => this.updateInput(event)}  />
+              onBlur={event => this.updateInput(event)}  />
           {this.state.password.touched && (
             <ValidationError message={this.validatePassword()} />
           )}
@@ -111,7 +115,7 @@ export default class RegistrationFormApp extends Component {
           <label htmlFor="repeatPassword">Repeat Password *</label>
           <input type="password" className="registration__control"
               name="repeatPassword" id="repeatPassword" 
-              onChange={event => this.updateInput(event)}/>
+              onBlur={event => this.updateInput(event)}/>
           {this.state.repeatPassword.touched && (
             <ValidationError message={this.validateRepeatPassword()} />
           )}
