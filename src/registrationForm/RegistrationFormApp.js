@@ -2,6 +2,10 @@ import React, { Component } from 'react';
 import ValidationError from './ValidationError';
 import './RegistrationFormApp.css';
 
+// NOTABLE /////////////
+// 1. dynamic updateInput() fn for handling multiple event handlers
+// 2. onBlur event handler (instead of typical onChange) for better validation UX.
+
 export default class RegistrationFormApp extends Component {
     
   constructor(props) {
