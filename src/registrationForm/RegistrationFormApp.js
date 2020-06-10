@@ -22,17 +22,23 @@ export default class RegistrationFormApp extends Component {
     } 
   }
 
-  updateName(name) {
-    this.setState({ name: { value: name, touched: true } });
+  // updateName(name) {
+  //   this.setState({ name: { value: name, touched: true } });
+  // }
+  // updatePassword(password) {
+  //   this.setState({ password: { value: password, touched: true } });
+  // }
+  // updateRepeatPassword(repeatPassword) {
+  //   this.setState({ repeatPassword: { value: repeatPassword, touched: true } });
+  // }
+  // ^^^^^^^^^^^ replace all these with just this
+  updateInput(event) {
+    this.setState({
+      [event.target.name]: { value: event.target.value, touched: true }
+    })
   }
 
-  updatePassword(password) {
-    this.setState({ password: { value: password, touched: true } });
-  }
 
-  updateRepeatPassword(repeatPassword) {
-    this.setState({ repeatPassword: { value: repeatPassword, touched: true } });
-  }
 
   handleSubmit = (event) => {
     event.preventDefault();
@@ -76,8 +82,8 @@ export default class RegistrationFormApp extends Component {
   }
 
   render() {
-    // const { name, password, repeatPassword } = this.state;
-    // console.log(name, password, repeatPassword);
+    const { name, password, repeatPassword } = this.state;
+    console.log(name, password, repeatPassword);
     return (
       <form className="registration" onSubmit={this.handleSubmit}>
         <h2>Register</h2>
@@ -86,7 +92,7 @@ export default class RegistrationFormApp extends Component {
           <label htmlFor="name">Name *</label>
           <input type="text" className="registration__control"
               name="name" id="name" 
-              onChange={event => this.updateName(event.target.value)} />
+              onChange={event => this.updateInput(event)} />
           {this.state.name.touched && (
             <ValidationError message={this.validateName()} />
           )}  
@@ -95,7 +101,7 @@ export default class RegistrationFormApp extends Component {
           <label htmlFor="password">Password *</label>
           <input type="password" className="registration__control"
               name="password" id="password" 
-              onChange={event => this.updatePassword(event.target.value)}  />
+              onChange={event => this.updateInput(event)}  />
           {this.state.password.touched && (
             <ValidationError message={this.validatePassword()} />
           )}
@@ -105,7 +111,7 @@ export default class RegistrationFormApp extends Component {
           <label htmlFor="repeatPassword">Repeat Password *</label>
           <input type="password" className="registration__control"
               name="repeatPassword" id="repeatPassword" 
-              onChange={event => this.updateRepeatPassword(event.target.value)}/>
+              onChange={event => this.updateInput(event)}/>
           {this.state.repeatPassword.touched && (
             <ValidationError message={this.validateRepeatPassword()} />
           )}
