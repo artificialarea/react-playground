@@ -8,12 +8,18 @@ import './index.css';
 // import App from './govuk-api-demonym/App'; // [v7] API+Promises exercise
 // import App from './lang-context/App'; // [v8] Context exercise
 // import App from './MouseTracker/MouseTrackerApp'; // [v9] Render Props (MouseTracker)
-import App from './registrationForm/RegistrationFormApp'; // [v10] Form Validation
+// import App from './registrationForm/RegistrationFormApp'; // [v10] Form Validation
+import App from './playingwithdanger/App' // [v11] Error Boundaries
+
+// ReactDOM.render(
+//   <BrowserRouter>
+//     <App />
+//   </BrowserRouter>, 
+//   document.getElementById('root')
+// );
 
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>, 
+  <App />, 
   document.getElementById('root')
 );
 
@@ -35,6 +41,9 @@ ReactDOM.render(
 //
 // [v10] Forms + Validation (RegistrationForm)
 // per: https://courses.thinkful.com/react-v1/checkpoint/17
+//
+// [v11] Error Boundaries
+// per: https://courses.thinkful.com/react-v1/checkpoint/17#creating-error-boundaries
 //
 //////////////////////////////////////////////////////////
 
