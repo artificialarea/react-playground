@@ -9,6 +9,8 @@ const LanguageContext = React.createContext({
   },
 })
 
+console.log("LanguageContext lang: " + window.navigator.language + " ...so why on page load is lang initially returning as 'undefined' elsewhere? (thus, the need for || {} as a safety net)");
+
 export default LanguageContext
 
 

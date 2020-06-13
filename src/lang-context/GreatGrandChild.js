@@ -6,10 +6,12 @@ class GreatGrandChild extends Component {
 
   // this gives us a new instance property: this.context
   static contextType = LanguageContext;
-
+  
   render() {
     // const copy = languageSpecificCopy['ko'] || {}  
     const copy = languageSpecificCopy[this.context.lang] || {}  // [fn1]
+    console.log("contextType: ", this.context);
+    console.log("this.context.lang", copy); // why 'undefined' initially? (thus, the reason for the || {} safety net)
     return (
       <section>
         <h2>{copy.title}</h2>
