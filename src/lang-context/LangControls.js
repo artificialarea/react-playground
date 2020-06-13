@@ -8,7 +8,7 @@ export default function LangControls(props) {
     <LanguageContext.Consumer>
       {/* {function renderProp() { */}
       {(value) => {
-        console.log('value of the renderProp: ', value)
+        // console.log('value of the renderProp: ', value)
         return (
           <>
             <button

@@ -4,10 +4,12 @@ import LangControls from './LangControls'
 import LanguageContext from './LanguageContext'
 
 export default class App extends Component {
-
-  state = {
-    lang: window.navigator.langauage  // why by default doesn't it detect browser set to 'en-US'?
-  };
+  constructor(props) {
+    super(props)
+    this.state = {
+      lang: window.navigator.language
+    };
+  }
 
   handleSetLang = (lang) => {
     this.setState({ lang })
@@ -22,7 +24,8 @@ export default class App extends Component {
 
     return (
       <LanguageContext.Provider
-        value={contextValue}>
+        value={contextValue}
+      >
         <div className='AppLang'>
           <LangControls 
             onSetLang={this.handleSetLang}/>
