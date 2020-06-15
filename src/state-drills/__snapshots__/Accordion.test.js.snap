@@ -34,9 +34,7 @@ exports[`<Accordion /> component opens and closes sections with multiple clicks 
       >
         Section 3
       </button>
-      <p>
-        Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?
-      </p>
+      <p />
     </li>
   </ul>
 </div>

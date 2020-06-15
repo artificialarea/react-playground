@@ -8,15 +8,18 @@ import './Accordion.css';
 class Accordion extends React.Component {
   state = {
     currentLi: null,
+    isExposed: false,
   }
 
   static defaultProps = {
     sections: [],
+    isExposed: false,
   }
 
   handleButtonClick = (index) => {
     this.setState({
       currentLi: index,
+      isExposed: !this.state.isExposed, // which toggles boolean
     })
   }
 
@@ -25,7 +28,7 @@ class Accordion extends React.Component {
       return (
         <li key={index} >
           <button onClick={() => this.handleButtonClick(index)}>{section.title}</button>
-          <p>{this.state.currentLi === index ? section.content : ""}</p>
+          <p>{this.state.currentLi === index  && this.state.isExposed ? section.content : ""}</p>
         </li>
       )
     });
@@ -45,3 +48,29 @@ class Accordion extends React.Component {
 }
 
 export default Accordion;
+
+/*
+export default class App extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = { isLiked: false, name: "Mickey Mouse" };
+    }
+
+    _toggleLikeState = () => {
+        this.setState({
+            isLiked: !this.state.isLiked
+        });
+    }
+
+    render() {
+        const { name, isLiked } = this.state;
+        console.log(name);
+        return (
+            <div className="parent">
+                <ChangeMeButton name={name} onToggleClick={() => this._toggleLikeState()} />
+                <span>{ isLiked ? "yay!": "nay!" }</span>
+            </div>
+        );
+    }
+}
+*/
