@@ -4,12 +4,10 @@ import LangControls from './LangControls'
 import LanguageContext from './LanguageContext'
 
 export default class App extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
+
+  state = {
       lang: window.navigator.language
-    };
-  }
+  };
 
   handleSetLang = (lang) => {
     this.setState({ lang })
