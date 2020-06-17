@@ -54,7 +54,7 @@ const secondTooltip = (
 // FOR <TABS /> /////////////////////////////////////////
 // to accept as a prop
 const tabsProp = [
-  { name: 'First tab',
+  { name: 'First tabzzz',
     content: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque.' },
   { name: 'Second tab',
     content: 'Laboriosam exercitationem quos consectetur expedita consequatur. Fugit, sapiente aspernatur corporis velit, dolor eum reprehenderit provident ipsam, maiores incidunt repellat! Facilis, neque doloremque. Lorem ipsum dolor sit amet consectetur adipisicing elit.' },
