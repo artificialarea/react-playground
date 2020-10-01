@@ -7,11 +7,16 @@ import App from './App'; // enable to see non-power-toe exercises
 // import App from './paltrows-power-toes/App'; // re:RouteRouter
 // import App from './govuk-api-demonym/App'; // re:API+Promises
 
+// ReactDOM.render(
+//   <BrowserRouter>
+//     <App />
+//   </BrowserRouter>, 
+//   document.getElementById('root')
+// );
+
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>, 
-  document.getElementById('root')
+      <App />, 
+    document.getElementById('root')
 );
 
 
