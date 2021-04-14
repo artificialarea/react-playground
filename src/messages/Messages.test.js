@@ -3,13 +3,6 @@ import ReactDOM from 'react-dom';
 import Messages from './Messages';
 import renderer from 'react-test-renderer';
 
-// TEMPLATE (that isn't used in tests below?)
-// it('renders without crashing', () => {
-//   const input = <some-value>; // e.g. number, string, function(param)
-//   const expectedOutput = true; // e.g. Boolean, number, string, etc
-//   const actualOutput = Messages(input);
-//   expect(actualOutput).toBe(expectedOutput);
-// });
 
 describe('<Messages />', () => {
 
